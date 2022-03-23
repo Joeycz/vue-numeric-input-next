@@ -1,7 +1,6 @@
 {
   "name": "vue-numeric-input-next",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "dist/vue-numeric-input-next.umd.js",
   "module": "dist/vue-numeric-input-next.es.js",
   "style": "dist/style.css",

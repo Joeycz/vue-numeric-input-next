@@ -1,29 +1,17 @@
 # Vue Numeric Input Next
 
-[![npm](https://img.shields.io/npm/v/vue-numeric-input.svg?style=flat-square)](https://www.npmjs.com/package/vue-numeric-input)
-[![npm](https://img.shields.io/npm/dt/vue-numeric-input.svg?style=flat-square)](https://www.npmjs.com/package/vue-numeric-input)
-[![Build Status](https://api.travis-ci.com/JayeshLab/vue3-resize-text.svg?branch=master)](https://app.travis-ci.com/github/JayeshLab/vue-numeric-input)
-[![codecov](https://codecov.io/gh/JayeshLab/vue-numeric-input/branch/master/graph/badge.svg?token=a4re2w3cGy)](https://codecov.io/gh/JayeshLab/vue-numeric-input)
-[![npm](https://img.shields.io/npm/l/vue-numeric-input.svg?style=flat-square)](http://opensource.org/licenses/MIT)
-
 Number input component based on Vue3 that is a replacement of native input number with optional control.
-
-![vue-numeric-input](https://user-images.githubusercontent.com/36194663/44717643-33e4ea00-aadb-11e8-82bf-e1fdeeea3bb5.gif)
-
-[Live Demo & Doc](https://jayeshlab.github.io/vue-numeric-input/)
 
 ### Installation
 
 Install via NPM
 
-`$ npm install vue-numeric-input-next` or `$ yarn add vue-numeric-input-next`
+`$ npm install vue-numeric-input-next` 
 
-Install via CDN
+or 
 
-```html
-<script src="https://unpkg.com/vue"></script>
-<script src="https://unpkg.com/vue-numeric-input-next"></script>
-```
+`$ yarn add vue-numeric-input-next`
+
 
 #### Global
 
@@ -42,7 +30,7 @@ app.use(VueNumericInput)
 Include the VueNumericInput  directly into your component using import:
 
 ```js
-import VueNumericInput from 'vue-numeric-input'
+import { VueNumericInputNext } from 'vue-numeric-input-next'
 ```
 ### Usage
 
@@ -50,19 +38,12 @@ import VueNumericInput from 'vue-numeric-input'
 
 ```html
 <template>
-  <div>
-    <vue-numeric-input  v-model="value" :min="1" :max="10" :step="2"></vue-numeric-input>
-  </div>
+  <vue-numeric-input-next  v-model="value" :min="1" :max="10" :step="2"></vue-numeric-input-next>
 </template>
 
-<script>
-  export default {
-    data() {
-      return {
-        value: 1,
-      };
-    },
-  };
+<script setup>
+import { ref } from 'vue'
+const value = ref(0)
 </script>
 ```
 
@@ -94,7 +75,7 @@ import VueNumericInput from 'vue-numeric-input'
 
 Event Name | Description        | Parameters
 -----------|--------------------|--------------
-input      | triggers when input| (newValue)
+update:modelValue      | triggers when input| (newValue)
 change     | triggers when the value changes| (newValue)
 blur       | triggers when Input blurs| (event: Event)
 focus      | triggers when Input focus| (event: Event)
