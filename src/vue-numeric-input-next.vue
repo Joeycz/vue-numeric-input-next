@@ -238,10 +238,9 @@ function stop (evt: Event) {
 
 function onBlur (event: Event) {
   let val = toNumber((event.target as HTMLInputElement).value)
-  if (props.precision) {
+  if (typeof val === 'number' && props.precision) {
     val = val.toFixed(props.precision)
   }
-  console.log(val)
   emits('update:modelValue', val)
   emits('blur', event)
 }
